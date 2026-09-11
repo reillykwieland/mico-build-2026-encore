@@ -171,7 +171,7 @@ a {
   content: "";
   flex: 1;
   height: 3px;
-  background-color: var(--deep-green);
+  background-color: var(--red-orange);
 }
 
 .ld-rule__label {
@@ -179,7 +179,7 @@ a {
   text-transform: uppercase;
   letter-spacing: 0.14em;
   font-size: 14px;
-  color: var(--deep-green);
+  color: var(--red-orange);
 }
 
 .ld-package__list {
@@ -227,11 +227,11 @@ a {
   font-size: 15px;
   line-height: 1;
   padding: 13px 22px 11px;
-  border: 3px solid var(--ink);
+  border: 3px solid var(--deep-green);
   background-color: var(--red-orange);
   color: var(--cream);
   text-decoration: none;
-  box-shadow: 4px 4px 0 0 var(--ink);
+  box-shadow: 4px 4px 0 0 var(--gold);
   cursor: pointer;
 }
 
