@@ -27,8 +27,8 @@
 /* --- Tokens -------------------------------------------------------------- */
 
 :root {
-  --cream: #f4efe4;
-  --cream-deep: #ebe3d3;
+  --cream: #f3efe6;
+  --cream-deep: #e9e2d4;
   --red-orange: #c5462c;
   --deep-green: #2c5140;
   --gold: #c9a23f;
@@ -94,70 +94,24 @@ a {
   margin: 0 0 8px;
 }
 
-.ld-lockup__eyebrow {
-  width: 190px;
-  margin: 0 auto 10px;
-  mix-blend-mode: multiply;
-}
-
-.ld-lockup__name {
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto 4px;
-  mix-blend-mode: multiply;
-}
-
-.ld-lockup__behold {
-  width: 100%;
-  max-width: 760px;
-  margin: 0 auto;
-  mix-blend-mode: multiply;
-}
-
-.ld-lockup__tour {
-  width: 100%;
-  max-width: 620px;
-  margin: 14px auto 0;
-  mix-blend-mode: multiply;
-}
-
 /* --- Hero ---------------------------------------------------------------- */
 
 .ld-hero {
-  position: relative;
-  margin: 0 0 28px;
+  margin: 0 0 24px;
   text-align: center;
 }
 
-.ld-hero__photo {
+.ld-hero__art {
   width: 100%;
-  max-width: 520px;
+  max-width: 760px;
   margin: 0 auto;
+}
+
+.ld-hero__tour {
+  width: 100%;
+  max-width: 620px;
+  margin: 10px auto 0;
   mix-blend-mode: multiply;
-}
-
-.ld-hero__holly {
-  position: absolute;
-  top: 4%;
-  right: 2%;
-  width: 76px;
-  mix-blend-mode: multiply;
-}
-
-.ld-hero__star {
-  position: absolute;
-  width: 40px;
-  mix-blend-mode: multiply;
-}
-
-.ld-hero__star--left {
-  left: 2%;
-  bottom: 22%;
-}
-
-.ld-hero__star--right {
-  right: 6%;
-  bottom: 12%;
 }
 
 /* --- Section headings ---------------------------------------------------- */
