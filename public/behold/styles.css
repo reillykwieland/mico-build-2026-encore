@@ -448,6 +448,8 @@ a {
 
   .ld-date-row__cta {
     justify-self: end;
+    width: 100%;
+    text-align: center;
   }
 
   .ld-date-row__group {
