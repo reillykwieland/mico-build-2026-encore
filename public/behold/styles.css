@@ -60,7 +60,6 @@
   --red-orange: #c5462c;
   --deep-green: #2c5140;
   --gold: #c9a23f;
-  --ink: #241f1c;
 
   --font-display: "Nickson Four", "Haettenschweiler", "Arial Narrow", sans-serif;
   --font-text: "Bourbon", Georgia, "Times New Roman", serif;
@@ -89,7 +88,7 @@ body {
   background-position: center top;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  color: var(--ink);
+  color: var(--deep-green);
   font-family: var(--font-text);
   font-size: 16px;
   line-height: 1.5;
@@ -161,8 +160,8 @@ a {
   display: block;
   margin: 0 auto 22px;
   padding: 12px 18px 10px;
-  border: 3px solid var(--ink);
-  box-shadow: 6px 6px 0 0 var(--red-orange);
+  border: 3px solid var(--red-orange);
+  box-shadow: 6px 6px 0 0 var(--gold);
   max-width: 560px;
 }
 
