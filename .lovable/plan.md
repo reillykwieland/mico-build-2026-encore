@@ -1,23 +1,28 @@
-# Lauren Daigle "Behold" 2026 — VIP Upgrade Pages
+# Lauren Daigle "Behold" 2026 — Static VIP Mockup
 
-Rebuild the Mico Ticketless layout with the Lauren Daigle Behold Christmas Tour 2026 artwork, colors, and fonts. Same two-page structure, same components, new art and content.
+Two static pages, plain HTML + one CSS file, portable into a Shopify Horizon theme as Liquid sections. Layout follows the Mico ticketless build; art, fonts and copy are the Behold 2026 poster.
 
-## Artwork
+## Build constraints
 
-From the attached Photoshop file I'll export:
-- The "Lauren Daigle / Behold" title lockup as the top banner logo
-- The cut-out photo of Lauren as the hero image
-- The cream paper-texture background
-- The holly sprig and starburst accents as small decorative marks
+- Plain HTML and CSS only — no Tailwind, no component libraries, no JS frameworks, no animation libraries.
+- One stylesheet with named classes (`.ld-hero`, `.ld-package`, `.ld-date-row`), CSS variables for palette (`--cream`, `--red-orange`, `--deep-green`, `--gold`) and the two font families.
+- Both fonts loaded with `@font-face`, referenced only by family name so paths can be swapped.
+- Images as plain `<img>` tags or CSS `background-image` with simple relative paths.
+- No routing, state, cart or checkout logic. Both pages fully static.
+- Mobile first; single column under 768px, date rows keep the button below the venue on small screens.
 
-Palette pulled straight from the poster: cream paper, red-orange, deep green, gold. The two uploaded fonts are used throughout — the bold condensed one for all headlines and buttons, the other for supporting text.
+## Artwork exported from the PSD
 
-## Page 1 — Splash / tour page (`/`)
+Title lockup ("Live in Concert / Lauren Daigle / Behold"), Lauren cut-out photo, cream paper texture, holly sprig, starburst accents — saved into `assets/` as PNG/JPEG.
 
-- Title lockup banner across the top
-- Lauren cut-out hero with soft color-block shapes behind it, holly and stars as accents
-- "VIP Upgrades" heading in an offset color block
-- One package box (centered): **Lauren Daigle Pre-Show Experience Upgrade**
+Palette from the poster: cream, red-orange, deep green, gold.
+
+## Page 1 — `/`
+
+- Title lockup banner
+- Lauren cut-out hero with holly and starburst accents
+- "VIP Upgrades" heading
+- One package box: **Lauren Daigle Pre-Show Experience Upgrade**
   - An Exclusive Pre-Show Acoustic Song Performance
   - An Intimate Q&A With Lauren Daigle
   - One (1) Specially Designed VIP Gift, Curated by Lauren Daigle
@@ -25,26 +30,22 @@ Palette pulled straight from the poster: cream paper, red-orange, deep green, go
   - First Access To Merchandise Shopping
   - Venue First Entry
   - On Site VIP Host
-- Ticketless disclaimer block
-- Tour date rows with a "VIP Upgrades" button on each:
+- Ticketless disclaimer
+- Four tour date rows, each with a "VIP Upgrades" link (`href="#"` placeholder):
   - Dec 2, 2026 — Nashville, TN — Ryman Auditorium
   - Dec 3, 2026 — Nashville, TN — Ryman Auditorium
   - Dec 5, 2026 — New Orleans, LA — Saenger Theatre
-  - Dec 12, 2026 — Orlando, FL — Dr. Phillips Center, Walt Disney Theater
+  - Dec 11, 2026 — Orlando, FL — Dr. Phillips Center, Walt Disney Theater
 
-## Page 2 — VIP product page (`/vip-product`)
+## Page 2 — `/vip-product`
 
-Same as Mico's: hero image on the left, package title, event date/venue, price, package selector, quantity, add-to-cart button, INCLUDES bullet list, and the collapsible full terms block. Ticket links and cart action stay as placeholders until the Shopify products exist.
+- Hero image left, details right
+- Package title, price `$75.00` with a separate line `+ 10% service fee` (plain text)
+- Show-date `<select>` with the four tour dates (no package selector — one package only)
+- Plain `<form>`: hidden `id` input (placeholder value), `quantity` number input, submit button
+- INCLUDES bullet list
+- Full terms in a native `<details>` / `<summary>` element
 
-## Notes / open items
+## Deliverable
 
-- No price was given, so the product page will show a placeholder price to swap in later.
-- Only one package was provided; if a second tier exists, I can add it as a side-by-side box like Mico.
-- This is built as a standalone page set ready to drop into the Shopify store; wiring it to real Shopify products and checkout is a follow-up step.
-
-## Technical
-
-- TanStack Start, two routes: `src/routes/index.tsx` and `src/routes/vip-product.tsx`, both with their own head metadata.
-- Fonts registered via `@font-face` in `src/styles.css`; brand colors added as CSS variables (`--accent-red`, `--accent-green`, `--accent-gold`, cream background) and exposed through `@theme inline`, no hardcoded color utilities.
-- PSD layers exported with ImageMagick to PNG/JPEG and referenced as image assets in `src/assets`.
-- Shared package/tour data kept as typed arrays at the top of the route files so copy edits are one place.
+`index.html`, `vip-product.html`, one stylesheet, and an `assets/` folder holding the fonts and exported images — ready to export as a zip. Both pages are also reachable in the live preview.
