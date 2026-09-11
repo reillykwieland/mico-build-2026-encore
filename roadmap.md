@@ -6,4 +6,4 @@
 - [x] Palette pass: reduce black+green combo, match splash page feel
 - [x] Mark "please note" line as Shopify product description (comment for port)
 - [x] Mark price as Shopify dynamic price placeholder (comment for port)
-- [ ] Link splash-page "VIP Upgrades" buttons to the product page.
+- [x] Link splash-page "VIP Upgrades" buttons to the product page.
