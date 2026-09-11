@@ -265,6 +265,46 @@ a {
   text-align: center;
 }
 
+/* --- Quantity stepper (product page) ------------------------------------- */
+
+.ld-stepper {
+  display: flex;
+  align-items: stretch;
+}
+
+.ld-stepper__btn {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1;
+  width: 38px;
+  border: 3px solid var(--deep-green);
+  background-color: var(--cream);
+  color: var(--deep-green);
+  cursor: pointer;
+}
+
+.ld-stepper__btn:hover,
+.ld-stepper__btn:focus {
+  background-color: var(--deep-green);
+  color: var(--cream);
+}
+
+.ld-qty {
+  font-family: var(--font-display);
+  font-size: 16px;
+  color: var(--deep-green);
+  background-color: var(--cream);
+  border: 3px solid var(--deep-green);
+  padding: 10px 8px;
+}
+
+.ld-stepper .ld-qty {
+  border-left: 0;
+  border-right: 0;
+}
+
+
+
 /* --- Tour dates ---------------------------------------------------------- */
 
 .ld-dates {
