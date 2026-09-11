@@ -398,7 +398,7 @@ a {
 
 .ld-price {
   font-family: var(--font-display);
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1;
   color: var(--red-orange);
   margin: 0;
@@ -415,8 +415,8 @@ a {
   flex-wrap: wrap;
   align-items: center;
   justify-content: flex-start;
-  gap: 12px;
-  margin: 18px 0 22px;
+  gap: 10px;
+  margin: 16px 0 20px;
 }
 
 .ld-buy-row .ld-price {
@@ -427,6 +427,13 @@ a {
 .ld-buy-row .ld-btn {
   flex: 0 0 auto;
   text-align: center;
+  padding: 13px 18px 11px;
+}
+
+.ld-buy-row .ld-qty {
+  width: 54px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .ld-field {
