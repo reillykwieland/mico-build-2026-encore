@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main class="ld-wrap">
+    <main class="ld-wrap ld-wrap--product">
       <div class="ld-product">
         <!-- Media -->
         <div class="ld-product__media">
@@ -38,11 +38,12 @@
         <!-- Details -->
         <div class="ld-product__info">
           <h1 class="ld-product__title">Pre-Show Experience Upgrade</h1>
-          <hr class="ld-product__rule" />
 
           <!-- Swap these two lines for the product's show metafields -->
           <p class="ld-product__meta">December 2, 2026</p>
           <p class="ld-product__meta">Nashville, TN &middot; Ryman Auditorium</p>
+
+          <hr class="ld-product__rule" />
 
           <form class="ld-buy-form" action="#" method="post">
             <input type="hidden" name="id" value="00000000000000" />
@@ -63,8 +64,8 @@
                 />
                 <button class="ld-stepper__btn" type="button" data-step="1" aria-label="Increase quantity">+</button>
               </div>
+              <button class="ld-btn ld-btn--cart" type="submit">Add to cart</button>
             </div>
-            <button class="ld-btn ld-btn--cart ld-btn--block" type="submit">Add to cart</button>
           </form>
 
           <div class="ld-product__includes">
@@ -81,7 +82,6 @@
             <li>On Site VIP Host</li>
           </ul>
 
-          <hr class="ld-product__rule" />
           <!-- Product description: in Shopify, replace this block with {{ product.description }} -->
           <p class="ld-product__note">
             Please note: this is a ticketless VIP upgrade. You must have a separately purchased
