@@ -1,0 +1,515 @@
+/* ==========================================================================
+   Lauren Daigle — BEHOLD Christmas Tour 2026
+   Ticketless VIP upgrade mockup. Plain CSS, no frameworks.
+   Ported into Shopify (Horizon) as Liquid sections: keep classes prefixed .ld-
+   ========================================================================== */
+
+/* --- Fonts ---------------------------------------------------------------
+   Swap the url() paths when moving into the theme (e.g. asset_url filter).
+   Reference the families only through --font-display / --font-text.        */
+
+@font-face {
+  font-family: "Nickson Four";
+  src: url("assets/fonts/S_S_Nickson_Four.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Bourbon";
+  src: url("assets/fonts/Bourbon.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Tokens -------------------------------------------------------------- */
+
+:root {
+  --cream: #f4efe4;
+  --cream-deep: #ebe3d3;
+  --red-orange: #c5462c;
+  --deep-green: #2c5140;
+  --gold: #c9a23f;
+  --ink: #241f1c;
+
+  --font-display: "Nickson Four", "Haettenschweiler", "Arial Narrow", sans-serif;
+  --font-text: "Bourbon", Georgia, "Times New Roman", serif;
+
+  --maxw: 1120px;
+  --gutter: 20px;
+}
+
+/* --- Base ---------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--cream);
+  background-image: url("assets/paper.jpg");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+  color: var(--ink);
+  font-family: var(--font-text);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: var(--red-orange);
+}
+
+.ld-wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 24px var(--gutter) 64px;
+}
+
+.ld-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* --- Title lockup -------------------------------------------------------- */
+
+.ld-lockup {
+  text-align: center;
+  margin: 0 0 8px;
+}
+
+.ld-lockup__eyebrow {
+  width: 190px;
+  margin: 0 auto 10px;
+  mix-blend-mode: multiply;
+}
+
+.ld-lockup__name {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto 4px;
+  mix-blend-mode: multiply;
+}
+
+.ld-lockup__behold {
+  width: 100%;
+  max-width: 760px;
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+}
+
+.ld-lockup__tour {
+  width: 100%;
+  max-width: 620px;
+  margin: 14px auto 0;
+  mix-blend-mode: multiply;
+}
+
+/* --- Hero ---------------------------------------------------------------- */
+
+.ld-hero {
+  position: relative;
+  margin: 0 0 28px;
+  text-align: center;
+}
+
+.ld-hero__photo {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  mix-blend-mode: multiply;
+}
+
+.ld-hero__holly {
+  position: absolute;
+  top: 4%;
+  right: 2%;
+  width: 76px;
+  mix-blend-mode: multiply;
+}
+
+.ld-hero__star {
+  position: absolute;
+  width: 40px;
+  mix-blend-mode: multiply;
+}
+
+.ld-hero__star--left {
+  left: 2%;
+  bottom: 22%;
+}
+
+.ld-hero__star--right {
+  right: 6%;
+  bottom: 12%;
+}
+
+/* --- Section headings ---------------------------------------------------- */
+
+.ld-section-title {
+  font-family: var(--font-display);
+  font-size: 32px;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--cream);
+  background-color: var(--deep-green);
+  display: block;
+  margin: 0 auto 22px;
+  padding: 12px 18px 10px;
+  border: 3px solid var(--ink);
+  box-shadow: 6px 6px 0 0 var(--red-orange);
+  max-width: 560px;
+}
+
+/* --- Package box --------------------------------------------------------- */
+
+.ld-package {
+  border: 3px solid var(--deep-green);
+  background-color: rgba(255, 255, 255, 0.55);
+  padding: 22px 18px 26px;
+  margin: 0 auto 28px;
+  max-width: 720px;
+  box-shadow: 8px 8px 0 0 var(--gold);
+}
+
+.ld-package__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  text-align: center;
+  color: var(--red-orange);
+  margin: 0 0 14px;
+}
+
+.ld-rule {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+}
+
+.ld-rule::before,
+.ld-rule::after {
+  content: "";
+  flex: 1;
+  height: 3px;
+  background-color: var(--deep-green);
+}
+
+.ld-rule__label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 14px;
+  color: var(--deep-green);
+}
+
+.ld-package__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.ld-package__list li {
+  padding: 6px 0;
+  font-size: 16px;
+}
+
+/* --- Disclaimer ---------------------------------------------------------- */
+
+.ld-disclaimer {
+  max-width: 720px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.ld-disclaimer__lead {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.2;
+  color: var(--deep-green);
+  margin: 0 0 8px;
+}
+
+.ld-disclaimer__note {
+  font-size: 14px;
+  margin: 0;
+  opacity: 0.8;
+}
+
+/* --- Buttons ------------------------------------------------------------- */
+
+.ld-btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 15px;
+  line-height: 1;
+  padding: 13px 22px 11px;
+  border: 3px solid var(--ink);
+  background-color: var(--red-orange);
+  color: var(--cream);
+  text-decoration: none;
+  box-shadow: 4px 4px 0 0 var(--ink);
+  cursor: pointer;
+}
+
+.ld-btn:hover,
+.ld-btn:focus {
+  background-color: var(--deep-green);
+  color: var(--cream);
+}
+
+.ld-btn--block {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+/* --- Tour dates ---------------------------------------------------------- */
+
+.ld-dates {
+  border-top: 3px solid var(--deep-green);
+}
+
+.ld-date-row {
+  display: block;
+  padding: 16px 4px;
+  border-bottom: 3px solid var(--deep-green);
+}
+
+.ld-date-row__date {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 20px;
+  color: var(--red-orange);
+  display: block;
+}
+
+.ld-date-row__city {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 20px;
+  display: block;
+}
+
+.ld-date-row__venue {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 12px;
+}
+
+/* --- Product page -------------------------------------------------------- */
+
+.ld-back {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 14px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 18px;
+}
+
+.ld-product {
+  display: block;
+}
+
+.ld-product__media {
+  border: 3px solid var(--deep-green);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.ld-product__media img {
+  mix-blend-mode: multiply;
+  margin: 0 auto;
+}
+
+.ld-product__title {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 1.05;
+  color: var(--red-orange);
+  margin: 0 0 8px;
+}
+
+.ld-product__meta {
+  font-size: 15px;
+  margin: 0 0 18px;
+  color: var(--deep-green);
+}
+
+.ld-price {
+  font-family: var(--font-display);
+  font-size: 34px;
+  line-height: 1;
+  margin: 0;
+}
+
+.ld-price-note {
+  font-size: 14px;
+  margin: 4px 0 20px;
+  opacity: 0.85;
+}
+
+.ld-field {
+  margin-bottom: 16px;
+}
+
+.ld-field__label {
+  display: block;
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 13px;
+  margin-bottom: 6px;
+  color: var(--deep-green);
+}
+
+.ld-select,
+.ld-qty {
+  font-family: var(--font-text);
+  font-size: 16px;
+  padding: 11px 12px;
+  border: 3px solid var(--ink);
+  background-color: var(--cream);
+  color: var(--ink);
+  width: 100%;
+  border-radius: 0;
+}
+
+.ld-qty {
+  max-width: 120px;
+}
+
+.ld-product__note {
+  font-size: 14px;
+  margin: 18px 0 24px;
+}
+
+.ld-details {
+  border: 3px solid var(--deep-green);
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 12px 16px;
+  margin-top: 8px;
+}
+
+.ld-details > summary {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 15px;
+  cursor: pointer;
+  color: var(--deep-green);
+}
+
+.ld-details__body {
+  font-size: 13px;
+  line-height: 1.6;
+  margin-top: 12px;
+}
+
+.ld-details__body p {
+  margin: 0 0 12px;
+}
+
+/* --- 768px and up -------------------------------------------------------- */
+
+@media (min-width: 768px) {
+  .ld-wrap {
+    padding: 40px 32px 80px;
+  }
+
+  .ld-section-title {
+    font-size: 44px;
+  }
+
+  .ld-package {
+    padding: 30px 34px 36px;
+  }
+
+  .ld-package__title {
+    font-size: 32px;
+  }
+
+  .ld-package__list li {
+    font-size: 17px;
+  }
+
+  .ld-hero__holly {
+    width: 120px;
+  }
+
+  .ld-hero__star {
+    width: 58px;
+  }
+
+  .ld-date-row {
+    display: grid;
+    grid-template-columns: 150px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 20px;
+    padding: 18px 4px;
+  }
+
+  .ld-date-row__venue {
+    margin-bottom: 0;
+    text-align: right;
+  }
+
+  .ld-date-row__city {
+    font-size: 22px;
+  }
+
+  .ld-date-row__cta {
+    justify-self: end;
+  }
+
+  .ld-date-row__group {
+    min-width: 0;
+  }
+
+  .ld-product {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+
+  .ld-product__media {
+    margin-bottom: 0;
+  }
+
+  .ld-product__title {
+    font-size: 40px;
+  }
+}
