@@ -558,6 +558,14 @@ a {
   }
 
   .ld-product__title {
-    font-size: 40px;
+    font-size: 32px;
+  }
+
+  .ld-product__info {
+    padding: 30px 30px 34px;
+  }
+
+  .ld-buy-row .ld-btn {
+    flex: 0 0 auto;
   }
 }
