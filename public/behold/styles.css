@@ -8,7 +8,7 @@
   font-family: var(--font-display);
   font-size: 18px;
   line-height: 1;
-  width: 44px;
+  width: 38px;
   border: 3px solid var(--deep-green);
   background-color: var(--cream);
   color: var(--deep-green);
@@ -362,20 +362,45 @@ a {
   margin: 0 0 10px;
 }
 
+.ld-product__includes {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 14px;
+}
+
+.ld-product__includes-label {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 14px;
+  color: var(--red-orange);
+}
+
+.ld-product__includes-line {
+  flex: 1;
+  height: 3px;
+  background-color: var(--red-orange);
+}
+
 .ld-product__meta {
-  font-size: 15px;
-  margin: 0 0 2px;
-  color: var(--ink);
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  font-size: 17px;
+  letter-spacing: 0.04em;
+  margin: 0 0 4px;
+  color: var(--deep-green);
 }
 
 .ld-product__meta:last-of-type {
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .ld-price {
   font-family: var(--font-display);
-  font-size: 34px;
+  font-size: 22px;
   line-height: 1;
+  color: var(--red-orange);
   margin: 0;
 }
 
@@ -388,20 +413,27 @@ a {
 .ld-buy-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: stretch;
-  gap: 12px;
-  margin: 18px 0 22px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin: 16px 0 20px;
 }
 
 .ld-buy-row .ld-price {
   display: flex;
   align-items: center;
-  margin-right: auto;
 }
 
 .ld-buy-row .ld-btn {
-  flex: 1 1 100%;
+  flex: 0 0 auto;
   text-align: center;
+  padding: 13px 18px 11px;
+}
+
+.ld-buy-row .ld-qty {
+  width: 54px;
+  padding-left: 8px;
+  padding-right: 8px;
 }
 
 .ld-field {
@@ -456,11 +488,13 @@ a {
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 0.03em;
+  color: var(--deep-green);
 }
 
 .ld-product__note {
   font-size: 14px;
   margin: 0 0 22px;
+  color: var(--deep-green);
 }
 
 .ld-details {
@@ -475,13 +509,14 @@ a {
   letter-spacing: 0.08em;
   font-size: 15px;
   cursor: pointer;
-  color: var(--ink);
+  color: var(--deep-green);
 }
 
 .ld-details__body {
   font-size: 13px;
   line-height: 1.6;
   margin-top: 12px;
+  color: var(--deep-green);
 }
 
 .ld-details__body p {
@@ -565,11 +600,4 @@ a {
     padding: 30px 30px 34px;
   }
 
-  .ld-buy-row {
-    flex-wrap: nowrap;
-  }
-
-  .ld-buy-row .ld-btn {
-    flex: 0 0 auto;
-  }
 }
