@@ -387,15 +387,21 @@ a {
 
 .ld-buy-row {
   display: flex;
+  flex-wrap: wrap;
   align-items: stretch;
   gap: 12px;
-  margin-top: 18px;
+  margin: 18px 0 22px;
 }
 
 .ld-buy-row .ld-price {
   display: flex;
   align-items: center;
   margin-right: auto;
+}
+
+.ld-buy-row .ld-btn {
+  flex: 1 1 100%;
+  text-align: center;
 }
 
 .ld-field {
