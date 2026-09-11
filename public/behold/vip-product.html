@@ -27,39 +27,33 @@
 
         <!-- Details -->
         <div class="ld-product__info">
-          <h1 class="ld-product__title">Lauren Daigle Pre-Show Experience Upgrade</h1>
+          <h1 class="ld-product__title">Pre-Show Experience Upgrade</h1>
           <hr class="ld-product__rule" />
-          <p class="ld-product__meta">Behold Christmas Tour 2026 &middot; Ticketless VIP upgrade</p>
+
+          <!-- Swap these two lines for the product's show metafields -->
+          <p class="ld-product__meta">December 2, 2026</p>
+          <p class="ld-product__meta">Nashville, TN &middot; Ryman Auditorium</p>
 
           <form action="#" method="post">
             <input type="hidden" name="id" value="00000000000000" />
 
-            <div class="ld-field">
-              <label class="ld-field__label" for="show-date">Select your show</label>
-              <select class="ld-select" id="show-date" name="show-date">
-                <option value="2026-12-02">Dec 2, 2026 — Nashville, TN — Ryman Auditorium</option>
-                <option value="2026-12-03">Dec 3, 2026 — Nashville, TN — Ryman Auditorium</option>
-                <option value="2026-12-05">Dec 5, 2026 — New Orleans, LA — Saenger Theatre</option>
-                <option value="2026-12-11">
-                  Dec 11, 2026 — Orlando, FL — Dr. Phillips Center, Walt Disney Theater
-                </option>
-              </select>
-            </div>
-
             <div class="ld-buy-row">
               <p class="ld-price">$75.00</p>
-              <label class="ld-sr-only" for="quantity">Quantity</label>
-              <input
-                class="ld-qty"
-                id="quantity"
-                name="quantity"
-                type="number"
-                min="1"
-                value="1"
-              />
+              <div class="ld-stepper">
+                <button class="ld-stepper__btn" type="button" data-step="-1" aria-label="Decrease quantity">&minus;</button>
+                <label class="ld-sr-only" for="quantity">Quantity</label>
+                <input
+                  class="ld-qty"
+                  id="quantity"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  value="1"
+                />
+                <button class="ld-stepper__btn" type="button" data-step="1" aria-label="Increase quantity">+</button>
+              </div>
               <button class="ld-btn" type="submit">Add to cart</button>
             </div>
-            <p class="ld-price-note">+ 10% service fee</p>
           </form>
 
           <p class="ld-rule"><span class="ld-rule__label">Includes</span></p>
@@ -80,7 +74,7 @@
           </p>
 
           <details class="ld-details">
-            <summary>Full terms &amp; conditions</summary>
+            <summary>Disclaimer</summary>
             <div class="ld-details__body">
               <p>
                 Please e-mail info@237global.com with any customer service questions. All ticketless
@@ -112,5 +106,16 @@
         </div>
       </div>
     </main>
+
+    <script>
+      // Quantity stepper — safe to delete if the theme handles this.
+      document.querySelectorAll(".ld-stepper__btn").forEach(function (btn) {
+        btn.addEventListener("click", function () {
+          var input = btn.parentElement.querySelector(".ld-qty");
+          var next = (parseInt(input.value, 10) || 1) + parseInt(btn.dataset.step, 10);
+          input.value = Math.max(1, next);
+        });
+      });
+    </script>
   </body>
 </html>
