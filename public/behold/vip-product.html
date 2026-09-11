@@ -19,8 +19,6 @@
   </head>
   <body>
     <main class="ld-wrap">
-      <a class="ld-back" href="index.html">&larr; Back to tour</a>
-
       <div class="ld-product">
         <!-- Media -->
         <div class="ld-product__media">
@@ -30,10 +28,8 @@
         <!-- Details -->
         <div class="ld-product__info">
           <h1 class="ld-product__title">Lauren Daigle Pre-Show Experience Upgrade</h1>
+          <hr class="ld-product__rule" />
           <p class="ld-product__meta">Behold Christmas Tour 2026 &middot; Ticketless VIP upgrade</p>
-
-          <p class="ld-price">$75.00</p>
-          <p class="ld-price-note">+ 10% service fee</p>
 
           <form action="#" method="post">
             <input type="hidden" name="id" value="00000000000000" />
@@ -50,8 +46,9 @@
               </select>
             </div>
 
-            <div class="ld-field">
-              <label class="ld-field__label" for="quantity">Quantity</label>
+            <div class="ld-buy-row">
+              <p class="ld-price">$75.00</p>
+              <label class="ld-sr-only" for="quantity">Quantity</label>
               <input
                 class="ld-qty"
                 id="quantity"
@@ -60,18 +57,13 @@
                 min="1"
                 value="1"
               />
+              <button class="ld-btn" type="submit">Add to cart</button>
             </div>
-
-            <button class="ld-btn ld-btn--block" type="submit">Add to cart</button>
+            <p class="ld-price-note">+ 10% service fee</p>
           </form>
 
-          <p class="ld-product__note">
-            Please note: this is a ticketless VIP upgrade. You must have a separately purchased
-            concert ticket in order to access the VIP package.
-          </p>
-
           <p class="ld-rule"><span class="ld-rule__label">Includes</span></p>
-          <ul class="ld-package__list">
+          <ul class="ld-product__list">
             <li>An Exclusive Pre-Show Acoustic Song Performance</li>
             <li>An Intimate Q&amp;A With Lauren Daigle</li>
             <li>One (1) Specially Designed VIP Gift, Curated by Lauren Daigle</li>
@@ -80,6 +72,12 @@
             <li>Venue First Entry</li>
             <li>On Site VIP Host</li>
           </ul>
+
+          <hr class="ld-product__rule" />
+          <p class="ld-product__note">
+            Please note: this is a ticketless VIP upgrade. You must have a separately purchased
+            concert ticket in order to access the VIP package.
+          </p>
 
           <details class="ld-details">
             <summary>Full terms &amp; conditions</summary>
