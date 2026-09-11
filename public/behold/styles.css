@@ -431,7 +431,7 @@ a {
 
   .ld-date-row {
     display: grid;
-    grid-template-columns: 160px 210px minmax(0, 1fr) 190px;
+    grid-template-columns: 160px 255px minmax(0, 1fr) 190px;
     align-items: center;
     gap: 20px;
     padding: 18px 4px;
