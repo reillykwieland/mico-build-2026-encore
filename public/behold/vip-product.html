@@ -44,26 +44,32 @@
           <p class="ld-product__meta">December 2, 2026</p>
           <p class="ld-product__meta">Nashville, TN &middot; Ryman Auditorium</p>
 
-          <form action="#" method="post">
+          <form class="ld-buy-form" action="#" method="post">
             <input type="hidden" name="id" value="00000000000000" />
 
             <div class="ld-buy-row">
-              <!-- Price: in Shopify, replace with {{ product.price | money }} -->
-              <p class="ld-price">$75.00</p>
-              <div class="ld-stepper">
-                <button class="ld-stepper__btn" type="button" data-step="-1" aria-label="Decrease quantity">&minus;</button>
-                <label class="ld-sr-only" for="quantity">Quantity</label>
-                <input
-                  class="ld-qty"
-                  id="quantity"
-                  name="quantity"
-                  type="number"
-                  min="1"
-                  value="1"
-                />
-                <button class="ld-stepper__btn" type="button" data-step="1" aria-label="Increase quantity">+</button>
+              <div class="ld-buy-group ld-buy-group--price">
+                <span class="ld-buy-group__label">Price</span>
+                <!-- Price: in Shopify, replace with {{ product.price | money }} -->
+                <p class="ld-price">$75.00</p>
               </div>
-              <button class="ld-btn" type="submit">Add to cart</button>
+              <div class="ld-buy-group ld-buy-group--qty">
+                <span class="ld-buy-group__label" id="qty-label">Qty</span>
+                <div class="ld-stepper" role="group" aria-labelledby="qty-label">
+                  <button class="ld-stepper__btn" type="button" data-step="-1" aria-label="Decrease quantity">&minus;</button>
+                  <label class="ld-sr-only" for="quantity">Quantity</label>
+                  <input
+                    class="ld-qty"
+                    id="quantity"
+                    name="quantity"
+                    type="number"
+                    min="1"
+                    value="1"
+                  />
+                  <button class="ld-stepper__btn" type="button" data-step="1" aria-label="Increase quantity">+</button>
+                </div>
+              </div>
+              <button class="ld-btn ld-btn--cart" type="submit">Add to cart</button>
             </div>
           </form>
 
