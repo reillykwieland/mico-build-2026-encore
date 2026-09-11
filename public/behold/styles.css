@@ -1,3 +1,31 @@
+/* Quantity stepper */
+.ld-stepper {
+  display: flex;
+  align-items: stretch;
+}
+
+.ld-stepper__btn {
+  font-family: var(--font-display);
+  font-size: 18px;
+  line-height: 1;
+  width: 44px;
+  border: 3px solid var(--deep-green);
+  background-color: var(--cream);
+  color: var(--deep-green);
+  cursor: pointer;
+}
+
+.ld-stepper__btn:hover,
+.ld-stepper__btn:focus {
+  background-color: var(--deep-green);
+  color: var(--cream);
+}
+
+.ld-stepper .ld-qty {
+  border-left: 0;
+  border-right: 0;
+}
+
 /* ==========================================================================
    Lauren Daigle — BEHOLD Christmas Tour 2026
    Ticketless VIP upgrade mockup. Plain CSS, no frameworks.
@@ -389,15 +417,26 @@ a {
   font-family: var(--font-text);
   font-size: 16px;
   padding: 11px 12px;
-  border: 3px solid var(--ink);
+  border: 3px solid var(--deep-green);
   background-color: var(--cream);
   color: var(--ink);
   width: 100%;
   border-radius: 0;
 }
 
+.ld-qty::-webkit-outer-spin-button,
+.ld-qty::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.ld-qty {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
 .ld-buy-row .ld-qty {
-  width: 84px;
+  width: 64px;
   text-align: center;
 }
 
