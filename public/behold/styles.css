@@ -435,10 +435,10 @@ a {
 .ld-buy-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: flex-start;
   gap: 12px;
-  margin: 18px 0 22px;
+  margin: 18px 0 12px;
 }
 
 .ld-buy-group {
@@ -460,11 +460,10 @@ a {
   min-width: 80px;
 }
 
-.ld-buy-row .ld-btn--cart {
-  flex: 1 1 auto;
-  min-width: 140px;
+.ld-buy-form .ld-btn--cart {
   text-align: center;
   padding: 13px 18px 11px;
+  margin-bottom: 22px;
 }
 
 .ld-buy-row .ld-qty {
