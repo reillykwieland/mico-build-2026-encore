@@ -227,18 +227,23 @@ a {
   max-width: 720px;
   margin: 0 auto 44px;
   text-align: center;
-  padding: 0 12px;
 }
 
 .ld-disclaimer__lead {
   font-family: var(--font-display);
   text-transform: uppercase;
-  font-size: 13px;
+  font-size: 10px;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--deep-green);
   margin: 0;
   white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .ld-disclaimer__lead {
+    font-size: 18px;
+  }
 }
 
 .ld-disclaimer__note {
