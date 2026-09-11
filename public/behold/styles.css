@@ -1,35 +1,17 @@
-/* Quantity stepper */
-.ld-stepper {
-  display: flex;
-  align-items: stretch;
-}
-
-.ld-stepper__btn {
-  font-family: var(--font-display);
-  font-size: 18px;
-  line-height: 1;
-  width: 38px;
-  border: 3px solid var(--deep-green);
-  background-color: var(--cream);
-  color: var(--deep-green);
-  cursor: pointer;
-}
-
-.ld-stepper__btn:hover,
-.ld-stepper__btn:focus {
-  background-color: var(--deep-green);
-  color: var(--cream);
-}
-
-.ld-stepper .ld-qty {
-  border-left: 0;
-  border-right: 0;
-}
-
 /* ==========================================================================
    Lauren Daigle — BEHOLD Christmas Tour 2026
-   Ticketless VIP upgrade mockup. Plain CSS, no frameworks.
+   Single stylesheet for BOTH pages (index.html + vip-product.html).
+   Plain CSS, no frameworks. All fonts and images are local, under assets/.
    Ported into Shopify (Horizon) as Liquid sections: keep classes prefixed .ld-
+
+   Contents:
+     1. Fonts (@font-face)
+     2. Tokens (palette, fonts, layout)
+     3. Base
+     4. Shared components (headings, buttons, rules, quantity stepper)
+     5. Page 1 — splash / tour dates (index.html)
+     6. Page 2 — VIP product (vip-product.html)
+     7. Responsive (768px and up)
    ========================================================================== */
 
 /* --- Fonts ---------------------------------------------------------------
