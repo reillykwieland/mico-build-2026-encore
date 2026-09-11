@@ -400,8 +400,12 @@ a {
   color: var(--deep-green);
 }
 
+.ld-product__rule + .ld-product__meta {
+  margin-top: 22px;
+}
+
 .ld-product__meta:last-of-type {
-  margin-bottom: 22px;
+  margin-bottom: 26px;
 }
 
 @media (max-width: 767px) {
@@ -409,8 +413,12 @@ a {
     font-size: 14px;
   }
 
+  .ld-product__rule + .ld-product__meta {
+    margin-top: 18px;
+  }
+
   .ld-product__meta:last-of-type {
-    margin-bottom: 16px;
+    margin-bottom: 20px;
   }
 }
 

@@ -48,26 +48,20 @@
             <input type="hidden" name="id" value="00000000000000" />
 
             <div class="ld-buy-row">
-              <div class="ld-buy-group ld-buy-group--price">
-                <span class="ld-buy-group__label">Price</span>
-                <!-- Price: in Shopify, replace with {{ product.price | money }} -->
-                <p class="ld-price">$75.00</p>
-              </div>
-              <div class="ld-buy-group ld-buy-group--qty">
-                <span class="ld-buy-group__label" id="qty-label">Qty</span>
-                <div class="ld-stepper" role="group" aria-labelledby="qty-label">
-                  <button class="ld-stepper__btn" type="button" data-step="-1" aria-label="Decrease quantity">&minus;</button>
-                  <label class="ld-sr-only" for="quantity">Quantity</label>
-                  <input
-                    class="ld-qty"
-                    id="quantity"
-                    name="quantity"
-                    type="number"
-                    min="1"
-                    value="1"
-                  />
-                  <button class="ld-stepper__btn" type="button" data-step="1" aria-label="Increase quantity">+</button>
-                </div>
+              <!-- Price: in Shopify, replace with {{ product.price | money }} -->
+              <p class="ld-price">$75.00</p>
+              <div class="ld-stepper" role="group" aria-label="Quantity">
+                <button class="ld-stepper__btn" type="button" data-step="-1" aria-label="Decrease quantity">&minus;</button>
+                <label class="ld-sr-only" for="quantity">Quantity</label>
+                <input
+                  class="ld-qty"
+                  id="quantity"
+                  name="quantity"
+                  type="number"
+                  min="1"
+                  value="1"
+                />
+                <button class="ld-stepper__btn" type="button" data-step="1" aria-label="Increase quantity">+</button>
               </div>
             </div>
             <button class="ld-btn ld-btn--cart ld-btn--block" type="submit">Add to cart</button>
